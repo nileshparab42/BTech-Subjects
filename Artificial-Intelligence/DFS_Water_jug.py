@@ -59,23 +59,17 @@ while flag==1:
     if(stack[top] in exp):
         stack=stack[:-1]
         top=len(stack)-1
-
-        
-    if(stack[top]==final):
-        print(stack)
-        flag=0
-    
-    if(stack[top] not in exp):
+    else:
+        exp.append(stack[top])
         stack.append(empty_jug0(stack[top]))
         stack.append(empty_jug1(stack[top]))
         stack.append(trans_jug0(stack[top]))
         stack.append(trans_jug1(stack[top]))
         stack.append(full_jug0(stack[top]))
         stack.append(full_jug1(stack[top]))
+
         
-    exp.append(stack[top])
-    
-    if(stack[top]!=final):      
-        print(stack)
-        print("\n")
-    
+    if(stack[top]==final):
+        flag=0
+
+print(exp)
