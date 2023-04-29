@@ -67,6 +67,7 @@ while flag==1:
         stack.append(trans_jug1(stack[top]))
         stack.append(full_jug0(stack[top]))
         stack.append(full_jug1(stack[top]))
+        top=len(stack)-1
 
         
     if(stack[top]==final):
