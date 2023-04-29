@@ -1,5 +1,3 @@
-import copy
-
 code="a*b+c/d-e/f+g/f"
 ncode=[]
 variables="ZYXWVUTS"
@@ -13,7 +11,6 @@ for operator in operators:
             code=code[:pos_res-1]+nvar+code[pos_res+2:]
             code=code+"  "
             variables=variables[1:]
-
 print(ncode)
 
 
